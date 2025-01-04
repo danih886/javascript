@@ -1,18 +1,42 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #intro{
+            background-color: antiquewhite;
+        }
+    </style>
+</head>
 <body>
-    <h2>GeeksforGeeks</h2>
-    <!-- Finding the HTML Elements by their Id in DOM -->
+    <div class="container">
+    <h2 id="name">Danish sharma</h2>
     <p id="intro">
-        A Computer Science portal for geeks.
+        Its about myself
     </p>
+    <button id="submit">Click here to know</button>
+    <button id="submit2">Click here to clear</button>
+    <button onclick="document.getElementById('name').style.color = 'red'">
+        Click Me!</button>
+        <button onclick="document.getElementsByClass('container').style.backgroundColor = 'blue'">
+            Click blue!</button>
     <p>
-        This example illustrates the <b>getElementById</b> method.
+        This example illustrates the  method.
     </p>
+    <button type="button" onclick="myFunction()">Set background color red</button>
+
+    <button type="button" onclick="document.body.style.backgroundColor='blue'">Set background color blue</button>
+
+
     <p id="demo"></p>
-    <script>
-        const element = document.getElementById("intro");
-        document.getElementById("demo").innerHTML =
-            "GeeksforGeeks introduction is: " + element.innerHTML;
+    </div>
+<script src="dom.js"></script>
+<script>
+    function myFunction() {
+      document.body.style.backgroundColor = "red";
+    }
     </script>
 </body>
 </html>
