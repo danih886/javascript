@@ -30,7 +30,7 @@
     else if(M=>60 && M<=50){
         grade="D";
     }
-    console.log(grade);
+    // console.log(grade);
     
  
     // const age = 45;
@@ -48,3 +48,37 @@
     //     price=7;
     // }
     //     console.log(price);
+
+
+    let arr = [1,3,4,5, "raj ",0.444 ,[1,2,3[333]]]
+    // function
+    arr.push()
+
+    let obj = {
+        key:{
+            a: "11"
+        }
+    }
+    let a= "08"
+    console.log(obj["key"]) 
+    console.log(obj.key) 
+    
+    console.log(`hy i m js ${a}`);
+    // function
+    // function a(){
+    // }
+    // a()
+
+//     function square(number) {
+//         console.log(88);
+//         return number * number;
+        
+//       }
+// square(88)   
+
+function add(a,b) {
+    // console.log(2+4)
+    return a+b;
+  }
+console.log (add(2,4))
+

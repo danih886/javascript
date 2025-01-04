@@ -3,5 +3,7 @@ Math.pow
 Math.random
 Math.ceil
 Math.floor
-
+Math.min
+Math.max
+Math.sqrt
 console.log
