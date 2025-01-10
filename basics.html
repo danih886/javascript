@@ -3,138 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>login page</title>
+    <title>LOGIN</title>
+    <link rel="stylesheet" href="basic.css">
 </head>
+
 <body>
-    <form class="formgroup">
-        <div class="conatainer">
-            <h1>
-                Enter The Details
-            </h1>
-        </div>
-        <div class="container1">
-            <label for="username">username</label>
-            <input type="text" id="username">
-        </div>
-        <div class="container2">
-            <label for="password">password</label>
-            <input type="password" id="pass">
-        </div>
-        <button type="button"> Submit </button>
-    </form>
+    <div class="container">
+        <h1>Login</h1>
+        <form id="loginForm">
+            <div class="input-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" placeholder="Enter username" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Enter password" required>
+            </div>
+            <button type="button" id="loginButton">Login</button>
+        </form>
+        <p id="message"></p>
+    </div>
+    <script src="basic.js"></script>
 </body>
 </html>
-
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Form with Pin, Edit and Delete</title>
-  <style>
-    .data-container {
-      margin-top: 10px;
-    }
-    .data-item {
-      display: flex;
-      align-items: center;
-      margin: 5px 0;
-    }
-    .data-item button {
-      margin-left: 10px;
-    }
-    .pinned {
-      color: red;
-    }
-  </style>
-</head>
-<body>
-
-  <h2>Submit and Manage Data</h2>
-
-  <form id="dataForm">
-    <input type="text" id="dataInput" placeholder="Enter data" required>
-    <button type="submit">Submit</button>
-  </form>
-
-  <div id="dataList" class="data-container"></div>
-
-  <script>
-    // Initialize data array
-    let dataArray = [];
-
-    // Get form elements
-    const dataForm = document.getElementById("dataForm");
-    const dataInput = document.getElementById("dataInput");
-    const dataList = document.getElementById("dataList");
-
-    // Event listener for form submission
-    dataForm.addEventListener("submit", function(event) {
-      event.preventDefault();  // Prevent page reload
-      const newData = dataInput.value.trim();
-
-      if (newData) {
-        dataArray.push({ text: newData, pinned: false });
-        renderData();
-      }
-
-      // Clear input field
-      dataInput.value = '';
-    });
-
-    // Function to render the data
-    function renderData() {
-      dataList.innerHTML = '';  // Clear current list
-
-      dataArray.forEach((dataItem, index) => {
-        const dataDiv = document.createElement("div");
-        dataDiv.classList.add("data-item");
-        
-        // Create and set data text
-        const textSpan = document.createElement("span");
-        textSpan.textContent = dataItem.text;
-        if (dataItem.pinned) {
-          textSpan.classList.add("pinned");
-        }
-
-        // Create and set 'Pin' button
-        const pinButton = document.createElement("button");
-        pinButton.textContent = dataItem.pinned ? "Unpin" : "Pin";
-        pinButton.onclick = function() {
-          dataItem.pinned = !dataItem.pinned;  // Toggle pinned state
-          renderData();  // Re-render the list
-        };
-
-        // Create and set 'Edit' button
-        const editButton = document.createElement("button");
-        editButton.textContent = "Edit";
-        editButton.onclick = function() {
-          const newText = prompt("Edit the data:", dataItem.text);
-          if (newText !== null && newText.trim() !== "") {
-            dataItem.text = newText.trim();
-            renderData();  // Re-render the list
-          }
-        };
-
-        // Create and set 'Delete' button
-        const deleteButton = document.createElement("button");
-        deleteButton.textContent = "Delete";
-        deleteButton.onclick = function() {
-          dataArray.splice(index, 1);  // Remove data item from array
-          renderData();  // Re-render the list
-        };
-
-        // Append buttons and text to the div
-        dataDiv.appendChild(textSpan);
-        dataDiv.appendChild(pinButton);
-        dataDiv.appendChild(editButton);
-        dataDiv.appendChild(deleteButton);
-
-        // Append the div to the data list
-        dataList.appendChild(dataDiv);
-      });
-    }
-  </script>
-
-</body>
-</html> -->
